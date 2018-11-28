@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - pasturepro@localhost" uuid="76c1f1ca-2804-453f-a243-060f4d1bc67a">
+    <database-info product="MySQL" version="5.7.22" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="pasturepro"/>
+      <table id="2" parent="1" name="address"/>
+      <table id="3" parent="1" name="admin"/>
+      <table id="4" parent="1" name="arole"/>
+      <table id="5" parent="1" name="arolefunction"/>
+      <table id="6" parent="1" name="images"/>
+      <table id="7" parent="1" name="orderdetails"/>
+      <table id="8" parent="1" name="orderform"/>
+      <table id="9" parent="1" name="ordertype"/>
+      <table id="10" parent="1" name="shopmsg"/>
+      <table id="11" parent="1" name="shoptype"/>
+      <table id="12" parent="1" name="user"/>
+      <column id="13" parent="2" name="adid">
+        <comment>地址ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="14" parent="2" name="username">
+        <comment>用户账号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="15" parent="2" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="16" parent="2" name="atel">
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="17" parent="2" name="admsg">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="18" parent="2" name="adstatus">
+        <comment>状态(1、默认地址)</comment>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="19" parent="2" name="PRIMARY">
+        <columns>adid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="20" parent="3" name="aid">
+        <comment>管理员ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="21" parent="3" name="username">
+        <comment>用户名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="22" parent="3" name="password">
+        <comment>密码</comment>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;123456&apos;</default-expression>
+      </column>
+      <column id="23" parent="3" name="aname">
+        <comment>姓名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="24" parent="3" name="aroleid">
+        <comment>角色表id</comment>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="25" parent="3" name="register">
+        <comment>注册时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="26" parent="3" name="astatus">
+        <comment>人员状态</comment>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="27" parent="3" name="PRIMARY">
+        <columns>aid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="28" parent="4" name="aroid">
+        <comment>角色表Id</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="29" parent="4" name="aroaid">
+        <comment>人员ID</comment>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="30" parent="4" name="arotype">
+        <comment>角色类型(0管理员)</comment>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="31" parent="4" name="PRIMARY">
+        <columns>aroid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="32" parent="5" name="afid">
+        <comment>角色功能ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="33" parent="5" name="aficon">
+        <comment>轮播图管理</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="34" parent="5" name="afuser">
+        <comment>用户管理</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="35" parent="5" name="afshop">
+        <comment>商品管理</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="36" parent="5" name="aforder">
+        <comment>订单管理</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="37" parent="5" name="aftype">
+        <comment>分类管理</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <key id="38" parent="5" name="PRIMARY">
+        <columns>afid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="39" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="40" parent="6" name="img">
+        <comment>图片地址</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="41" parent="6" name="sortnum">
+        <comment>排序</comment>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="42" parent="6" name="itime">
+        <comment>新增日期</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="43" parent="6" name="istatus">
+        <comment>状态</comment>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="44" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="45" parent="7" name="detid">
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="46" parent="7" name="ordersmid">
+        <comment>商品信息ID</comment>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="47" parent="7" name="osnum">
+        <comment>商品数量</comment>
+        <data-type>int(4)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="48" parent="7" name="PRIMARY">
+        <columns>detid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="49" parent="8" name="orderid">
+        <comment>订单编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="50" parent="8" name="username">
+        <comment>用户账号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="51" parent="8" name="name">
+        <comment>收货人</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="52" parent="8" name="tel">
+        <comment>收货人电话</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="53" parent="8" name="addrmsg">
+        <comment>收货地址</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="54" parent="8" name="upaddress">
+        <comment>修改后的地址</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="55" parent="8" name="sellmsg">
+        <comment>卖家留言</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="56" parent="8" name="intitle">
+        <comment>发票抬头</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="57" parent="8" name="money">
+        <comment>实付款</comment>
+        <mandatory>1</mandatory>
+        <data-type>double(4,2)</data-type>
+      </column>
+      <column id="58" parent="8" name="orcode">
+        <comment>订单详情id</comment>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="59" parent="8" name="oftid">
+        <comment>订单状态</comment>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="60" parent="8" name="oftime">
+        <comment>生成订单时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="61" parent="8" name="PRIMARY">
+        <columns>orderid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="62" parent="9" name="otid">
+        <comment>状态ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="63" parent="9" name="ostatus">
+        <comment>订单状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="64" parent="9" name="paytime">
+        <comment>付款时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="65" parent="9" name="puttime">
+        <comment>发货时间</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="66" parent="9" name="strname">
+        <comment>物流名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="67" parent="9" name="strnum">
+        <comment>物流单号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="68" parent="9" name="successtime">
+        <comment>收货时间(交易成功)</comment>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="69" parent="9" name="commsg">
+        <comment>评价内容</comment>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <key id="70" parent="9" name="PRIMARY">
+        <columns>otid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="71" parent="10" name="smid">
+        <comment>商品信息ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="72" parent="10" name="smsid">
+        <comment>商品信息表ID</comment>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="73" parent="10" name="smicon">
+        <comment>商品图片</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="74" parent="10" name="smname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="75" parent="10" name="smunit">
+        <comment>商品单位</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="76" parent="10" name="smnum">
+        <comment>库存</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="77" parent="10" name="smprice">
+        <comment>商品单价</comment>
+        <mandatory>1</mandatory>
+        <data-type>double(6,2)</data-type>
+      </column>
+      <column id="78" parent="10" name="sstatus">
+        <comment>商品状态</comment>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="79" parent="10" name="PRIMARY">
+        <columns>smid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="80" parent="11" name="sid">
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="81" parent="11" name="sortnum">
+        <comment>排序</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="82" parent="11" name="sname">
+        <comment>品类名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="83" parent="11" name="stime">
+        <comment>新增时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="84" parent="11" name="PRIMARY">
+        <columns>sid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="85" parent="12" name="uid">
+        <comment>用户ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(4)</data-type>
+      </column>
+      <column id="86" parent="12" name="username">
+        <comment>用户账号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="87" parent="12" name="password">
+        <comment>用户密码</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="88" parent="12" name="uicon">
+        <comment>用户头像</comment>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="89" parent="12" name="utel">
+        <comment>用户手机号</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="90" parent="12" name="utime">
+        <comment>用户注册时间</comment>
+        <data-type>datetime</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="91" parent="12" name="ustatus">
+        <comment>用户状态</comment>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="92" parent="12" name="PRIMARY">
+        <columns>uid</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
